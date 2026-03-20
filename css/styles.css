@@ -1,0 +1,110 @@
+:root{
+
+--primary:#0A91DE;
+--text-dark:#727B81;
+--text-light:#666F74;
+--border:#e5e7eb;
+--bg:#f7f7f7;
+--white:#ffffff;
+--shadow:0 6px 16px rgba(0,0,0,0.12);
+}
+/* BODY */
+body{
+background:#eee;
+font-family:'Manrope', sans-serif;
+}
+/* SIDEBAR */
+header{
+width:328px;
+height:100vh;
+background:var(--bg);
+padding:32px 24px;
+border-right:1px solid var(--border);
+}
+/* LOGO (Nunito font only here) */
+h1{
+font-family:'Nunito', sans-serif;
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+}
+h1 span{
+color:var(--primary);
+}
+/* WELCOME TEXT */
+header p{
+font-size:24px;
+font-weight:bold;
+color:var(--text-dark);
+padding-bottom:12px;
+margin-bottom:22px;
+border-bottom:1px solid var(--border);
+}
+/* MENU */
+.menu{
+list-style:none;
+}
+.menu li{
+position:relative;
+margin-bottom:18px;
+}
+/* MENU LINKS */
+.menu a{
+display:flex;
+align-items:center;
+gap:8px;
+text-decoration:none;
+color:var(--text-dark);
+font-size:18px;
+font-weight:normal;
+}
+/* ICON SIZE */
+.menu img{
+width:27px;
+height:27px;
+}
+/* ARROW */
+.arrow{
+margin-left:auto;
+width:27px;
+height:27px;
+}
+/* DROPDOWN */
+.dropdown{
+position:absolute;
+left:190px;
+top:-6px;
+width:174px;
+background:var(--white);
+border-radius:7px;
+border:1px solid var(--border);   /* stroke */
+box-shadow:var(--shadow);
+list-style:none;
+padding:8px 0;
+visibility:hidden;
+opacity:0;
+transition:0.25s;
+}
+/* DROPDOWN ITEMS */
+.dropdown li{
+border-bottom:1px solid var(--border);
+}
+.dropdown li:last-child{
+border-bottom:none;
+}
+/* DROPDOWN LINKS */
+.dropdown a{
+display:block;
+padding:12px 18px;
+font-size:18px;
+color:var(--text-light);
+}
+/* HOVER EFFECT */
+.dropdown a:hover{
+background:#f3f4f6;
+}
+/* SHOW DROPDOWN */
+.profile-item:hover .dropdown{
+visibility:visible;
+opacity:1;
+}
